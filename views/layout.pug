@@ -1,0 +1,15 @@
+html
+    head
+        title St Peters Walworth 
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/tachyons.min.css")
+        link(rel="stylesheet" href="/st-peters.css")
+    body.sans-serif
+        include header.pug
+        main#main.pa3
+            block content
+        include footer.pug
+        script.
+            const footer = document.getElementById('footer')
+            const main = document.getElementById('main')
+            main.style.minHeight = `${window.innerHeight - (footer.offsetHeight + 42)}px`
