@@ -1,15 +1,16 @@
 html
     head
-        title St Peters Walworth 
+        title St Peter's Chunch Walworth 
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet" href="/tachyons.min.css")
-        link(rel="stylesheet" href="/st-peters.css")
+        style.
+            details > summary { list-style: none; }
+            details > summary::-webkit-details-marker { display: none; }
+            dl dt {font-weight: bold;}
+            .min-vh-75 {min-height: 75vh;}
+            td {padding: .25rem 0;}
     body.sans-serif
         include header.pug
-        main#main.pa3
+        main#main.pa3.min-vh-75
             block content
         include footer.pug
-        script.
-            const footer = document.getElementById('footer')
-            const main = document.getElementById('main')
-            main.style.minHeight = `${window.innerHeight - (footer.offsetHeight + 42)}px`

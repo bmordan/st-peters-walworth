@@ -4,8 +4,10 @@
   "description": "The website for St Peters Church, Walworth London.",
   "main": "main.js",
   "scripts": {
-    "dev": "nodemon main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "rm -f ./public/*.html || true && nodemon main.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -f ./public/*.html || true && node ./lib/build.js",
+    "deploy": "npm run build && surge ./public --domain stpeterswalworth.surge.sh"
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,8 @@
   "homepage": "https://github.com/bmordan/st-peters-walworth#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "serve-static": "^1.14.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

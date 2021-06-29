@@ -1,11 +1,21 @@
 header.pa3.flex.justify-start.align-items-center.bg-blue
-    a.link.white(href="/").dib.flex-auto St Peters
-    nav
-        a.dib.link.white.mr2(href="/services") Weekly Services
-        a.dib.link.white.mr2(href="/special-services") Special Services
-        a.dib.link.white.mr2(href="/safeguarding") Safeguarding
-        a.dib.link.white(href="/clergy") Clergy 
-    script.
-        const state {
-            collapsed
-        }
+    section.flex-auto.flex.items-center
+        a.link.white(href="/") St Peters
+    details.flex.items-center.dn.dn-ns
+        summary
+            svg(viewbox="0 0 100 80" width="40" height="30")
+                rect(width="100" height="20" fill="white" y="0")
+                rect(width="100" height="20" fill="white" y="30")
+                rect(width="100" height="20" fill="white" y="60")
+        nav.absolute.bg-near-white.mt3.pb2.right-0.left-0.flex.flex-column.justify-between.shadow-3
+            a.dib.link.pa3(href="/services") Weekly Services
+            a.dib.link.pa3(href="/special-services") Special Services
+            a.dib.link.pa3(href="/safeguarding") Safeguarding
+            a.dib.link.pa3(href="/clergy") Clergy
+            a.dib.link.pa3(href="/membership") Membership
+    nav.dn.dib-ns
+        a.dib.link.mr2-m.mr3-l.white(href="/services") Weekly #[span.dn-m Services]
+        a.dib.link.mr2-m.mr3-l.white(href="/special-services") Special #[span.dn-m Services]
+        a.dib.link.mr2-m.mr3-l.white(href="/safeguarding") Safeguarding
+        a.dib.link.mr2-m.mr3-l.white(href="/clergy") Clergy
+        a.dib.link.white(href="/membership") Membership
